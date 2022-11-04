@@ -6,6 +6,7 @@
 //  a = 2; b = 10 -> max = 10
 //  a = -9 b = -3 -> max = -3
 
+HEAD
 [Блок-схема](Exe001/diagram.drawio.png) | [Код](Exe001/Program,cs)
 
 
