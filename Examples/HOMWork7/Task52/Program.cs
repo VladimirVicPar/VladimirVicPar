@@ -28,7 +28,7 @@ int[,] CreateArray(int n, int m)
 }
 
 
-// Заполнение массива
+// Печать массива
 void PrintArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
