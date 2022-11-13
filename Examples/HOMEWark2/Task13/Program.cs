@@ -5,30 +5,22 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-//int number = ReaderWriterLock Int ("Введите число" );
-//int count = number.ToString().Length;
-//Console.Write(MakeArray(number, count));
 
-Console.WriteLine("Введите трехзначное число: ");
-int x = Convert.ToInt32(Console.ReadLine());
-
-while (99 <= x || x >= 99999)
+Console.Write("Введите трехзначное число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+int num2 = num;
+int index = -2;
+if (num < 100) Console.WriteLine("Третьей цифры слева нет");
+while (num2 > 0)
 {
-    if(x > 99 || x <= 999)
-    {
-        x = x / 100;
-        Console.WriteLine(x);
-    }
-    if(x > 9999 || x <= 99999) x = x / 100;
-    {
-        Console.WriteLine(x % 10);
-    }
-    if(x <= 99)
-    {
-        Console.WriteLine("третьей цифры нет");
-    }
-    else
-    {
-        Console.WriteLine("число не подходит, попробуйте другое");
-    }
+    num2 = num2 / 10;
+    index++;
 }
+
+index = Convert.ToInt32(Math.Pow(10, index));
+
+num = num % index;
+index = index / 10;
+num = num / index;
+
+Console.WriteLine(num);
